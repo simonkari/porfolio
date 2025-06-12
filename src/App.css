@@ -1,0 +1,11 @@
+/* src/App.css */
+
+/* Optional: global font or transition settings */
+body {
+  @apply bg-background text-text font-sans;
+}
+
+/* Utility for container width */
+.container {
+  @apply max-w-6xl mx-auto px-4;
+}
