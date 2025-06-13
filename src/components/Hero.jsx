@@ -1,34 +1,47 @@
+import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+
 export default function Hero() {
   return (
     <section className="py-20" id="hero" data-aos="fade-up">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
         {/* Text Section */}
-        <div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <span className="text-[#02DAF8] uppercase tracking-wider text-sm font-normal">
+            Frontend Developer & UI/UX Designer
+          </span>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white font-normal">
             Hi, I’m Simon
           </h1>
-          <p className="text-lg mb-6 text-zinc-300">
-            A passionate Frontend Developer and UI/UX Designer with a sharp eye
-            for clean design and seamless user experiences. I specialize in
-            building responsive, modern websites and mobile apps that don’t just
-            look good — they perform.
+          <p className="text-lg mb-6 text-zinc-300 font-normal">
+            I build responsive websites and mobile apps with clean design and smooth experiences.
+            Let's bring your idea to life with modern, performant code and UX that delights.
           </p>
           <a
             href="#contact"
-            className="inline-block bg-[#02DAF8] hover:bg-[#02c2e0] text-black px-6 py-3 rounded-lg font-semibold transition"
+            className="inline-flex items-center bg-[#02DAF8] hover:bg-[#02c2e0] text-black px-6 py-3 rounded-lg font-normal transition"
           >
-            Let’s Work Together
+            Let’s Work Together <ArrowRight className="ml-2" size={16} />
           </a>
-        </div>
+        </motion.div>
 
         {/* Image Section */}
-        <div className="flex justify-center">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="w-full h-full"
+        >
           <img
             src="/images/simon.png"
             alt="Simon"
-            className="rounded-full w-64 h-64 object-cover shadow-lg border-4 border-[#02DAF8]"
+            className="w-full h-auto object-cover rounded-xl shadow-xl"
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

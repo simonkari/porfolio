@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx
 import { useState } from 'react';
 
 export default function Navbar() {
@@ -12,7 +11,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-[#0d0d0d]/80 backdrop-blur-md z-50">
+    <nav className="fixed top-0 left-0 w-full bg-[#0d0d0d]/80 backdrop-blur-md z-50 font-normal">
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
         {/* Logo Section */}
         <a href="#hero" className="flex items-center">
@@ -51,7 +50,7 @@ export default function Navbar() {
 
       {/* Mobile Links */}
       {open && (
-        <div className="md:hidden bg-[#0d0d0d] px-6 pb-4 space-y-4">
+        <div className="md:hidden bg-[#0d0d0d] px-6 pb-4 space-y-4 font-normal">
           {links.map((l) => (
             <a
               key={l.href}
